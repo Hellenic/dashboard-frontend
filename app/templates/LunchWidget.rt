@@ -1,0 +1,14 @@
+<div id="lunch-widget" class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Lunches nearby</h3>
+    </div>
+
+    <div class="panel-body">
+      <ul>
+        <li rt-repeat="place in this.state.nearbyPlaces">
+          <h3>{placeIndex}. {place.name}</h3>
+          <p>{place.menu}</p>
+        </li>
+      </ul>
+    </div>
+</div>

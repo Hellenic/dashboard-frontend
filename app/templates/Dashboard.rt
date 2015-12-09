@@ -1,0 +1,17 @@
+<!--
+//<rt-require dependency="react-router" as="ReactRouter"/>
+//<ReactRouter.Link to="/game/1">Game One</ReactRouter.Link>
+-->
+<div id="dashboard" class="container-fluid">
+  <h1>Dashboard</h1>
+
+  <section class="components row">
+
+    <figure rt-repeat="Widget in this.state.widgets" class="widget col-md-4">
+
+      <Widget />
+
+    </figure>
+
+  </section>
+</div>

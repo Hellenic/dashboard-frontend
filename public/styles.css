@@ -3,6 +3,19 @@ body {
 }
 
 main {
-	margin: 30px;
-	margin-top: 70px;
+	width: 100%;
+	height: 100;
+
+	padding: 30px;
+	padding-top: 70px;
+	background-color: #77A7B6;
+}
+
+.gridster ul, ol {
+    list-style: none;
+}
+
+.gridster .panel {
+	width: inherit;
+	height: inherit;
 }

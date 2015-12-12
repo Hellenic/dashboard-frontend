@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var LunchWidgetTemplate = require('./templates/LunchWidget.rt.js');
+var LunchWidgetTemplate = require('./LunchWidget.rt.js');
 
 var LunchWidget = React.createClass({
   getNearbyPlaces: function() {

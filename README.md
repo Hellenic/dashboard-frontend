@@ -1,7 +1,7 @@
 
 # Dashboard - Frontend
 
-Isomorphic React testing
+Isomorphic React Dashboard
 
 To use: Clone or download the repository to yourself.
 

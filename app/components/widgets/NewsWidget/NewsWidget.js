@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var NewsWidgetTemplate = require('./templates/NewsWidget.rt.js');
+var NewsWidgetTemplate = require('./NewsWidget.rt.js');
 
 var NewsWidget = React.createClass({
   getLocalNews: function() {

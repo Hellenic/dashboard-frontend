@@ -12,9 +12,9 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('rt', function() {
-    gulp.src('app/templates/*.rt')
+    gulp.src('app/components/**/*.rt')
         .pipe(rt({ modules: 'commonjs', format: 'stylish' }))
-        .pipe(gulp.dest('app/components/templates'));
+        .pipe(gulp.dest('app/components/'));
 });
 
 gulp.task('default', ['scripts', 'rt']);

@@ -12,7 +12,7 @@ var Dashboard = React.createClass({
     // TODO Get this from localStorage
     return {
       widgets: [NewsWidget, LunchWidget, FlagDaysWidget],
-      layout: [{ x: 0, y: 0, w: 2, h: 1, i: 1 }, { x: 2, y: 0, w: 2, h: 1, i: 2}, { x: 4, y: 0, w: 4, h: 2, i: 3}]
+      layout: [{ x: 0, y: 0, w: 4, h: 3, i: 1 }, { x: 0, y: 4, w: 4, h: 3, i: 2}, { x: 5, y: 0, w: 8, h: 6, i: 3}]
     };
   },
   componentDidMount: function() {

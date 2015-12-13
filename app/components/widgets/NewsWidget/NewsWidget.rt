@@ -5,7 +5,7 @@
 
     <div class="panel-body">
       <ul>
-        <li rt-repeat="news in this.state.news">
+        <li rt-repeat="news in this.state.news" key={newsIndex}>
           <h3>{newsIndex}. {news.title}</h3>
           <p>{news.content}</p>
         </li>

@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var ReactDOMServer = require('react-dom/server');
 var ReactRouter = require('react-router');
 var history = require('history');
 var routes = require('./routes.js');
@@ -17,8 +18,8 @@ module.exports = function(app) {
 
 		match({routes: routes, location: location}, function(error, redirectLocation, renderProps) {
 
-			// React.renderToString takes your component and generates the markup
-			var reactHtml = React.renderToString(<RoutingContext {...renderProps} />);
+			// ReactDOMServer.renderToString takes your component and generates the markup
+			var reactHtml = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
 
 			// Output HTML rendered by React
 			res.render('index.html', { reactOutput: reactHtml });

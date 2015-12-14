@@ -1,23 +1,34 @@
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
+var request = require('request');
 
 var Ajax = {
 
   get: function(url, callback) {
 
-    fetch(url).then(function(response) {
-        if (response.status >= 400) {
-            throw new Error("Bad response from server");
-        }
-        return response.json();
-    })
-    .then(function(data) {
-      if (typeof(callback) === "function")
-      {
-        callback(data);
+    request.get(url, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        callback(JSON.parse(body));
       }
     });
 
+  },
+
+  post: function(url, data, callback) {
+    /*
+    var options = {
+      url: url,
+      headers: {
+        'Access-Control-Allow-Origin': 'http://localhost:4444/',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      form: data
+    };
+    */
+
+    request.post(url, data, function(error, response, body) {
+      if (!error && response.statusCode == 200) {
+        return JSON.parse(body);
+      }
+    });
   }
 
 };

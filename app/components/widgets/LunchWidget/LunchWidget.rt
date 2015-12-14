@@ -5,9 +5,10 @@
 
     <div class="panel-body">
       <ul>
-        <li rt-repeat="place in this.state.nearbyPlaces">
-          <h3>{placeIndex}. {place.name}</h3>
-          <p>{place.menu}</p>
+        <li rt-repeat="restaurant in this.state.restaurants">
+          <h3>{restaurant.name}</h3>
+          <span>{restaurant.phone}</span> <span>{restaurant.street}</span>
+          
         </li>
       </ul>
     </div>

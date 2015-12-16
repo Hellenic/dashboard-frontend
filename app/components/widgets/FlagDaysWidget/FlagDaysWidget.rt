@@ -7,7 +7,6 @@
     <ul>
       <li rt-repeat="flagday in this.state.flagDays">
         <b>{flagday.name}</b> <small>{flagday.date}</small>
-        </p>{flagday.description}</p>
       </li>
     </ul>
   </div>

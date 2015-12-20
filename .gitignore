@@ -19,4 +19,5 @@ node_modules
 npm-debug.log
 
 /public
+/app/components/widgets/Widgets.js
 /**/*.rt.js

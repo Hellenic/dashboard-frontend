@@ -10,6 +10,11 @@ var NewsWidget = React.createClass({
       {"title": "Another world", "content": "Test content for the news #2."}
     ];
   },
+  getDefaultProps: function() {
+    return {
+      id: 'NewsWidget'
+    }
+  },
   getInitialState: function() {
     return {
       news: this.getLocalNews(),

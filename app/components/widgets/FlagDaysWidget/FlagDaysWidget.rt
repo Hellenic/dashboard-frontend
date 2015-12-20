@@ -1,6 +1,7 @@
 <div id="news-widget" class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title">Finnish Flag Days</h3>
+    <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
   </div>
 
   <div class="panel-body">

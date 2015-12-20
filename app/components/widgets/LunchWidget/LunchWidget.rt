@@ -1,6 +1,7 @@
 <div id="lunch-widget" class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title">Lunches nearby</h3>
+      <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
     </div>
 
     <div class="panel-body">
@@ -8,7 +9,7 @@
         <li rt-repeat="restaurant in this.state.restaurants">
           <h3>{restaurant.name}</h3>
           <span>{restaurant.phone}</span> <span>{restaurant.street}</span>
-          
+
         </li>
       </ul>
     </div>

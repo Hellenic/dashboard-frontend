@@ -3,6 +3,7 @@
       <h3 class="panel-title">Dashboard TODO</h3>
       <span>Some ideas of the widgets still to be added...</span>
       <a href="http://www.avoindata.net">Avoindata.net</a>, <a href="http://www.avoindata.fi">Avoindata.fi</a>
+      <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
     </div>
 
     <div class="panel-body">

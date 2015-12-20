@@ -7,6 +7,7 @@ var FlagDaysWidgetTemplate = require('./FlagDaysWidget.rt.js');
 var FlagDaysWidget = React.createClass({
   getDefaultProps: function() {
     return {
+      id: 'FlagDaysWidget',
       url: 'http://0.0.0.0:3000/api/FlagDays?filter[where][country]=Finland'
     };
   },

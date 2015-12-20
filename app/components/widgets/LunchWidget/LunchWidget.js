@@ -7,6 +7,7 @@ var LunchWidgetTemplate = require('./LunchWidget.rt.js');
 var LunchWidget = React.createClass({
   getDefaultProps: function() {
     return {
+      id: 'LunchWidget',
       url: 'http://0.0.0.0:3000/api/Restaurants'
     };
   },

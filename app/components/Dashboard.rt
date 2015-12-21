@@ -5,18 +5,16 @@
 
   <section>
       <ReactGridLayout layout={this.state.layout} cols={12} rowHeight={100} onLayoutChange="{this.onLayoutChange}">
-
         <figure rt-repeat="Widget in this.state.widgets" key={WidgetIndex+1} class="widget">
           <Widget onRemove="{this.onWidgetRemove}"/>
         </figure>
-
       </ReactGridLayout>
   </section>
 
   <section id="widgetbar">
     <ul>
-      <li rt-repeat="widget in this.state.availableWidgets" key={widgetIndex}>
-        <button onClick="(e)=>this.onWidgetAdd(e, widget);">{widget.displayName}</button>
+      <li rt-repeat="Widget in this.state.availableWidgets" key={WidgetIndex}>
+        <button onClick="(e)=>this.onWidgetAdd(e, Widget);">{Widget.displayName}</button>
       </li>
     </ul>
   <section>

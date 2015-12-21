@@ -50,4 +50,8 @@ gulp.task('less', function() {
     .pipe(gulp.dest('public/'));
 });
 
-gulp.task('default', ['rt', 'widgets', 'scripts', 'less']);
+gulp.task('static', function() {
+  gulp.src('app/images/*').pipe(gulp.dest('public/images/'));
+});
+
+gulp.task('default', ['rt', 'widgets', 'scripts', 'less', 'static']);

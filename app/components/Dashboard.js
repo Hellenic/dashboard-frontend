@@ -9,6 +9,7 @@ var WidgetManager = require('./core/WidgetManager');
  * Dashboard component
  * Dashboard consists of different component and this class manages
  * the widgets and their layout.
+ *
  * TODO Refactor, a bit too complex right now
  */
 var Dashboard = React.createClass({
@@ -59,7 +60,7 @@ var Dashboard = React.createClass({
     this.state.widgets.splice(widgetIndex, 1);
     this.state.layout.splice(widgetIndex, 1);
     this.state.availableWidgets.push(widget);
-    
+
     this.setState({
       widgets: this.state.widgets,
       availableWidgets: this.state.availableWidgets,

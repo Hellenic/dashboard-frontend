@@ -14,7 +14,7 @@
   <section id="widgetbar">
     <ul>
       <li rt-repeat="Widget in this.state.availableWidgets" key={WidgetIndex}>
-        <button onClick="(e)=>this.onWidgetAdd(e, Widget);">{Widget.displayName}</button>
+        <a href="#" onClick="(e)=>this.onWidgetAdd(e, Widget);" class="btn btn-info">{Widget.displayName}</a>
       </li>
     </ul>
   <section>

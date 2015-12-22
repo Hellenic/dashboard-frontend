@@ -18,6 +18,8 @@ coverage
 node_modules
 npm-debug.log
 
+## Generated file
 /public
 /app/components/widgets/Widgets.js
+/app/less/widgets.less
 /**/*.rt.js

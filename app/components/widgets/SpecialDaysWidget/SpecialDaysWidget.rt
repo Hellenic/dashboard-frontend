@@ -1,13 +1,12 @@
-<div id="news-widget" class="panel panel-default">
-  <div class="panel-body">
-    <p class="text-right">
-      <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
-    </p>
-    <ul>
-      <li rt-repeat="day in this.state.days" key={dayIndex}>
-        <img rt-if="day.flag_day" class="icon" src="images/flag-icon.png"></img>
-        <b>{day.name}</b> <small>{day.date}</small>
-      </li>
-    </ul>
+<div id="specialdays-widget" class="well well-sm">
+  <div class="pull-right">
+    <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
   </div>
+
+  <ul class="list-unstyled">
+    <li rt-repeat="day in this.state.days" key={dayIndex}>
+      <img rt-if="day.flag_day" class="icon" src="images/flag-icon.png"></img>
+      <h4>{day.name} <small>{this.formatDate(day.date, 'DD.MM.YYYY')}</small></h4>
+    </li>
+  </ul>
 </div>

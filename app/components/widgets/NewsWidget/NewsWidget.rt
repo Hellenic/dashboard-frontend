@@ -1,7 +1,9 @@
 <div id="news-widget" class="panel panel-primary">
     <div class="panel-heading">
+      <div class="pull-right">
+        <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
+      </div>
       <h3 class="panel-title">Local news</h3>
-      <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
     </div>
 
     <div class="panel-body">

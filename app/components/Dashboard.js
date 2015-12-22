@@ -17,7 +17,7 @@ var Dashboard = React.createClass({
   getDefaultProps: function() {
     return {
       defaultWidgetIds: ['NewsWidget', 'SpecialDaysWidget', 'LunchWidget'],
-      defaultLayout: [{ i: 1, x: 0, y: 0, w: 4, h: 3 }, { i: 2, x: 0, y: 4, w: 4, h: 3 }, { i: 3, x: 5, y: 0, w: 8, h: 6 }]
+      defaultLayout: [{ i: 1, x: 0, y: 0, w: 4, h: 3 }, { i: 2, x: 0, y: 4, w: 4, h: 1 }, { i: 3, x: 5, y: 0, w: 8, h: 6 }]
     }
   },
   // Initial state - either default or stored

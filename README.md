@@ -19,3 +19,7 @@ Run with
 ```
 npm start
 ```
+
+## License
+
+MIT © [Hannu Kärkkäinen](http://blankpace.net/HK/)

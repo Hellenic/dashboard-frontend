@@ -1,4 +1,4 @@
-<div id="news-widget" class="panel panel-primary">
+<div id="news-widget" class="panel panel-primary parent-size">
     <div class="panel-heading">
       <div class="pull-right">
         <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>

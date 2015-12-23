@@ -1,16 +1,40 @@
-<div id="lunch-widget" class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Lunches nearby</h3>
+<div id="lunch-widget" class="panel panel-primary parent-size">
+  <div class="panel-heading">
+    <div class="pull-right">
       <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
     </div>
+    <h3 class="panel-title">Lunches nearby</h3>
+  </div>
 
-    <div class="panel-body">
-      <ul>
-        <li rt-repeat="restaurant in this.state.restaurants">
-          <h3>{restaurant.name}</h3>
-          <span>{restaurant.phone}</span> <span>{restaurant.street}</span>
+  <div class="panel-body" rt-if="this.state.selectedRestaurant">
+    <div class="restaurant-details" rt-scope="this.state.selectedRestaurant as restaurant">
+      <h4 onClick="{this.onSelectedReset}">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span>{restaurant.name}</span>
+      </h4>
+      <span>{restaurant.street}, {restaurant.city}</span><br />
 
-        </li>
-      </ul>
+      <div class="pull-left">
+        <span rt-repeat="time in restaurant.openingTimes">
+          {timeIndex}: {time}<br />
+        </span>
+      </div>
+      <div class="pull-left">
+        <div rt-if="typeof(restaurant.menus) === 'undefined'">Loading menus...</div>
+        <div rt-if="typeof(restaurant.menus) !== 'undefined'">
+          <ul>
+            <li rt-repeat="menu in restaurant.menus">
+              {menu.name}, {menu.validFrom} - {menu.validTo} - {menu.price}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <ul class="list-group">
+    <li rt-repeat="restaurant in this.state.restaurants" key={restaurantIndex} class="list-group-item" onClick="() => this.onShowDetails(restaurant)">
+      <h5>{restaurant.name} <small>{restaurant.street}, {restaurant.city}</small></h5>
+    </li>
+  </ul>
 </div>

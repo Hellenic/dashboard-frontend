@@ -1,4 +1,4 @@
-<div id="todo-list-widget" class="panel panel-primary">
+<div id="todo-list-widget" class="panel panel-primary parent-size">
     <div class="panel-heading">
       <h3 class="panel-title">Dashboard TODO</h3>
       <span>Some ideas of the widgets still to be added...</span>

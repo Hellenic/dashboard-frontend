@@ -1,4 +1,4 @@
-<div id="specialdays-widget" class="well well-sm">
+<div id="specialdays-widget" class="well well-sm parent-size">
   <div class="pull-right">
     <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
   </div>

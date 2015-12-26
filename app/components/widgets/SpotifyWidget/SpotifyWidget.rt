@@ -1,0 +1,11 @@
+<div id="spotify-widget" class="well well-sm parent-size">
+  <div class="pull-right">
+    <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
+  </div>
+
+  <div>
+    <iframe src="https://embed.spotify.com/?uri={this.props.uri}"
+      width="300" height="80" frameborder="0" allowtransparency="true">
+    </iframe>
+  </div>
+</div>

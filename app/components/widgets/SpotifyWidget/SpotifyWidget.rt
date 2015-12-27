@@ -5,7 +5,7 @@
 
   <div>
     <iframe src="https://embed.spotify.com/?uri={this.props.uri}"
-      width="300" height="80" frameborder="0" allowtransparency="true">
+      width="350" height="80" frameborder="0" allowtransparency="true">
     </iframe>
   </div>
 </div>

@@ -9,7 +9,6 @@
     <div class="panel-body">
       <ul>
         <li>Calendar (from Google?)</li>
-        <li>Trains (based on location)</li>
         <li>Recipes of the day</li>
         <li>Blogger</li>
         <li>Youtube</li>
@@ -17,7 +16,6 @@
         <li>Google Fit</li>
         <li>Exercise suggestions</li>
         <li>Github</li>
-        <li>Spotify (web widget / API)</li>
         <li>SOME (FB / Twitter)</li>
       </ul>
     </div>

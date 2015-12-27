@@ -1,4 +1,15 @@
 var request = require('request');
+/*
+request = request.defaults({
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:4444/',
+    'Access-Control-Allow-Credentials': false
+  }
+  // json: true
+  // simple: false
+  // resolveWithFullResponse: true
+});
+*/
 
 var Ajax = {
 
@@ -10,6 +21,22 @@ var Ajax = {
       }
     });
 
+  },
+
+  getPlain: function(url, callback)
+  {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+
+    xhr.onload = function() {
+      callback(xhr.responseText);
+    };
+
+    xhr.onerror = function() {
+      console.error('Error with getPlain XHR request');
+    };
+
+    xhr.send();
   },
 
   post: function(url, data, callback) {

@@ -7,11 +7,14 @@
     </div>
 
     <div class="panel-body" rt-scope="this.state.station as station">
-      Next trains from {station.name_fi}:
-      <ul>
-        <li rt-repeat="departure in station.departures">
-          {departure.code}: {departure.time}
+      Next trains from {station.name_fi} towards Helsinki:
+
+      <ul class="list-group">
+        <li rt-repeat="departure in station.departures" key={departureIndex} class="list-group-item">
+          {departure.time}: {departure.train}
         </li>
       </ul>
+
+      <small>TODO Show station based on location, also show buses</small>
     </div>
 </div>

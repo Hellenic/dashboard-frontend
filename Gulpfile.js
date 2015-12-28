@@ -15,7 +15,7 @@ gulp.task('scripts', function() {
   gulp.src(['app/main.js'])
     .pipe(browserify({
         debug: true,
-        transform: [ 'reactify' ]
+        transform: [ 'babelify' ]
     }))
     .pipe(gulp.dest('public/'));
 });
@@ -58,6 +58,16 @@ gulp.task('less', function() {
 
 gulp.task('static', function() {
   gulp.src('app/images/*').pipe(gulp.dest('public/images/'));
+});
+
+// TODO Livereload or something similar
+// http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
+// https://www.browsersync.io/docs/gulp/
+// https://www.npmjs.com/package/gulp-server-livereload
+gulp.task('watch', function () {
+   gulp.watch('app/**/*.js', ['scripts']);
+   gulp.watch('app/**/*.rt', ['rt']);
+   gulp.watch('app/**/*.less', ['less']);
 });
 
 gulp.task('default', ['rt', 'widgets', 'scripts', 'less', 'static']);

@@ -3,7 +3,10 @@
 var React = require('react');
 var Ajax = require('../../utils/Ajax');
 var PublicTransportWidgetTemplate = require('./PublicTransport.rt.js');
-
+/*
+ *
+ * API doc: http://api.reittiopas.fi/hsl/beta/?userhash=cd71775034a901560ff445b41d78203f43bc226fdb3f
+**/
 var PublicTransportWidget = React.createClass({
   getDefaultProps: function() {
     // Kilon juna-asema: 2131551

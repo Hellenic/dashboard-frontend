@@ -7,6 +7,8 @@
     </div>
 
     <div class="panel-body">
-      
+      Current weight: {this.state.weight} <br />
+      TODO Exercise suggestions
     </div>
+    <a href="https://fit.google.com/" target="_blank">&gt; Google Fit</a>
 </div>

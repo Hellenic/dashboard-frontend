@@ -2,9 +2,17 @@
 @import 'react-grid-layout';
 @import 'widgets';
 
+html, body {
+	height: 100%;
+}
+
 main {
 	width: 100%;
-	height: 100;
+	height: 100%;
+
+	background-image: url('images/background.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
 
 	padding: 30px;
 	padding-top: 70px;
@@ -17,5 +25,8 @@ main {
 
 .parent-size {
 	height: inherit;
-	// width: inherit;
+}
+
+.panel, .well {
+	background-color: rgba(213, 213, 255, 0.65);
 }

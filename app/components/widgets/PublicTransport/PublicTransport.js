@@ -42,6 +42,8 @@ function tidyDepartures(departures)
     departure.time = time.substring(0,2) +':'+ time.substring(2);
   });
 
+  // Limit to 5 results
+  departures.splice(5);
   return departures;
 }
 

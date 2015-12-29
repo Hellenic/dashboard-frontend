@@ -3,7 +3,7 @@
       <div class="pull-right">
         <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
       </div>
-      <h3 class="panel-title">Public Transport</h3>
+      <h3 class="panel-title"><a href="http://www.reittiopas.fi/?from_in=Kilo%2C+Espoo">Public Transport</a></h3>
     </div>
 
     <div class="panel-body" rt-scope="this.state.station as station">

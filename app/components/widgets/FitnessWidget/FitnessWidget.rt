@@ -1,14 +1,13 @@
-<div id="google-fit-widget" class="panel panel-primary parent-size">
+<div id="google-fit-widget" class="panel panel-info parent-size">
     <div class="panel-heading">
       <div class="pull-right">
         <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
       </div>
-      <h3 class="panel-title">Google Fit</h3>
+      <h3 class="panel-title"><a href="https://fit.google.com/" target="_blank">Fitness</a></h3>
     </div>
 
     <div class="panel-body">
       Current weight: {this.state.weight} <br />
       TODO Exercise suggestions
     </div>
-    <a href="https://fit.google.com/" target="_blank">&gt; Google Fit</a>
 </div>

@@ -1,8 +1,7 @@
 <rt-require dependency="react-grid-layout" as="ReactGridLayout"/>
 
 <div id="dashboard">
-  <h1>Dashboard</h1>
-
+  
   <section>
       <ReactGridLayout layout={this.state.layout} cols={12} rowHeight={100} onLayoutChange="{this.onLayoutChange}">
         <figure rt-repeat="Widget in this.state.widgets" key={WidgetIndex+1} class="widget">
@@ -14,7 +13,7 @@
   <section id="widgetbar">
     <ul>
       <li rt-repeat="Widget in this.state.availableWidgets" key={WidgetIndex}>
-        <a href="#" onClick="(e)=>this.onWidgetAdd(e, Widget);" class="btn btn-info">{Widget.displayName}</a>
+        <a href="#" onClick="(e)=>this.onWidgetAdd(e, Widget);" class="btn btn-primary">{Widget.displayName}</a>
       </li>
     </ul>
   <section>

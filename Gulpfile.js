@@ -29,25 +29,25 @@ gulp.task('less', function() {
     .pipe(gulp.dest('public/'));
 });
 
+gulp.task('static', function() {
+  gulp.src('app/images/*').pipe(gulp.dest('public/images/'));
+});
+
 gulp.task('html', ['static'], function() {
   gulp.src('app/index.html')
     .pipe(renderReact())
     .pipe(gulp.dest('public/'));
 });
 
-gulp.task('static', function() {
-  gulp.src('app/images/*').pipe(gulp.dest('public/images/'));
-});
-
 // Browsersync server
-gulp.task('serve', function() {
+gulp.task('serve', ['html'], function() {
     browserSync.init({
         server: "public/"
     });
 
     gulp.watch('app/*.html', ['html']);
-    // gulp.watch('app/**/*.js', ['scripts']);
-    // gulp.watch('app/**/*.rt', ['rt']);
+    gulp.watch('app/**/*.js', ['scripts']);
+    gulp.watch('app/**/*.rt', ['rt', 'scripts']);
     gulp.watch('app/**/*.less', ['less']);
 
     gulp.watch('public/*').on('change', browserSync.reload);

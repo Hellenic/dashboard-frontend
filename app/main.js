@@ -3,7 +3,7 @@
 // import routes from './routes/routes.js';
 var React = require('react');
 var ReactRouter = require('react-router');
-var routes = require('./routes/routes.js');
+var routes = require('./routes.js');
 
 var Router = ReactRouter.Router;
 

@@ -1,7 +1,7 @@
 <rt-require dependency="react-grid-layout" as="ReactGridLayout"/>
 
 <div id="dashboard">
-  
+
   <section>
       <ReactGridLayout layout={this.state.layout} cols={12} rowHeight={100} onLayoutChange="{this.onLayoutChange}">
         <figure rt-repeat="Widget in this.state.widgets" key={WidgetIndex+1} class="widget">

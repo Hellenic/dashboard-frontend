@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var less = require('gulp-less');
 var rt = require('gulp-react-templates');
+var browserSync = require('browser-sync').create();
+var renderReact = require('./tools/gulp-render-react');
 var path = require('path');
 var fs = require('fs');
 
@@ -56,18 +58,28 @@ gulp.task('less', function() {
     .pipe(gulp.dest('public/'));
 });
 
+gulp.task('html', function() {
+  gulp.src('app/index.html')
+    .pipe(renderReact())
+    .pipe(gulp.dest('public/'));
+});
+
 gulp.task('static', function() {
   gulp.src('app/images/*').pipe(gulp.dest('public/images/'));
 });
 
-// TODO Livereload or something similar
-// http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
-// https://www.browsersync.io/docs/gulp/
-// https://www.npmjs.com/package/gulp-server-livereload
-gulp.task('watch', function () {
-   gulp.watch('app/**/*.js', ['scripts']);
-   gulp.watch('app/**/*.rt', ['rt']);
-   gulp.watch('app/**/*.less', ['less']);
+// Browsersync server
+gulp.task('serve', function() {
+    browserSync.init({
+        server: "public/"
+    });
+
+    gulp.watch('app/*.html', ['html', 'static']);
+    gulp.watch('app/**/*.js', ['scripts']);
+    gulp.watch('app/**/*.rt', ['rt']);
+    gulp.watch('app/**/*.less', ['less']);
+
+    gulp.watch('public/*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['rt', 'widgets', 'scripts', 'less', 'static']);
+gulp.task('default', ['rt', 'widgets', 'scripts', 'less', 'html', 'static']);

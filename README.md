@@ -5,19 +5,19 @@ Isomorphic React Dashboard
 
 To use: Clone or download the repository to yourself.
 
-Build changes with:
-```
-gulp
-```
-
 Install dependencies with:
 ```
 npm install
 ```
 
-Run with
+Build with:
 ```
-npm start
+gulp
+```
+
+Run with:
+```
+gulp serve
 ```
 
 ## License

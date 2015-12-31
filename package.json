@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "dashboard-frontend",
   "dependencies": {
+    "babel-register": "^6.3.13",
     "history": "^1.9.1",
     "moment": "^2.10.6",
     "mustache": "^2.2.0",

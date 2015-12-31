@@ -5,8 +5,6 @@ var ReactDOMServer = require('react-dom/server');
 var ReactRouter = require('react-router');
 var history = require('history');
 require("babel-register");
-require("babel-polyfill");
-var routes = require('../app/routes.js');
 
 var RoutingContext = React.createFactory(ReactRouter.RoutingContext);
 var match = ReactRouter.match;
@@ -27,7 +25,9 @@ module.exports = function() {
 function getReactRender()
 {
   var location = history.createLocation('/');
+  var routes = require('../app/routes.js');
   var html = '';
+
   match({ routes: routes, location: location }, function(error, redirectLocation, renderProps) {
     html = ReactDOMServer.renderToString(RoutingContext(renderProps));
   });

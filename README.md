@@ -12,7 +12,7 @@ npm install
 
 Build with:
 ```
-gulp
+gulp rt && gulp
 ```
 
 Run with:

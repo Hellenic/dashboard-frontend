@@ -24,7 +24,6 @@
     "gulp-less": "^3.0.5",
     "gulp-react-templates": "^0.1.0",
     "lodash": "^3.10.1",
-    "path": "*",
     "through2": "^2.0.0"
   },
   "scripts": {

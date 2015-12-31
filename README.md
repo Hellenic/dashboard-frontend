@@ -12,8 +12,9 @@ npm install
 
 Build with:
 ```
-gulp rt && gulp
+gulp
 ```
+> On first time, you might need to run 'gulp rt' first
 
 Run with:
 ```

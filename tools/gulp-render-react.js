@@ -4,7 +4,11 @@ var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var ReactRouter = require('react-router');
 var history = require('history');
-require("babel-register");
+
+require('babel-register');
+// require("babel-register")({
+//   ignore: /\w+.rt.js/
+// });
 
 var RoutingContext = React.createFactory(ReactRouter.RoutingContext);
 var match = ReactRouter.match;

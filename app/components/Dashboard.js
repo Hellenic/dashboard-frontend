@@ -29,7 +29,8 @@ var Dashboard = React.createClass({
     return {
       widgets: widgets,
       availableWidgets: availableWidgets,
-      layout: layout
+      layout: layout,
+      displayWidgetSelector: false
     };
   },
   // Store the layout after it's been saved
@@ -65,6 +66,12 @@ var Dashboard = React.createClass({
       widgets: this.state.widgets,
       availableWidgets: this.state.availableWidgets,
       layout: this.state.layout
+    });
+  },
+  toggleWidgetSelector: function()
+  {
+    this.setState({
+      displayWidgetSelector: !this.state.displayWidgetSelector
     });
   },
   render: DashboardTemplate

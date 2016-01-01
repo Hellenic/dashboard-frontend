@@ -1,7 +1,9 @@
 var gulp = require('gulp');
-var browserify = require('gulp-browserify');
+// var browserify = require('gulp-browserify');
+var browserify = require("browserify");
 var less = require('gulp-less');
 var rt = require('gulp-react-templates');
+var fs = require('fs');
 var browserSync = require('browser-sync').create();
 var renderReact = require('./tools/gulp-render-react');
 
@@ -12,12 +14,10 @@ gulp.task('rt', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('app/main.js')
-    .pipe(browserify({
-        debug: true,
-        transform: [ 'babelify' ]
-    }))
-    .pipe(gulp.dest('public/'));
+  browserify('./app/main.js')
+    .transform('babelify')
+    .bundle()
+    .pipe(fs.createWriteStream("public/main.js"));
 });
 
 gulp.task('less', function() {

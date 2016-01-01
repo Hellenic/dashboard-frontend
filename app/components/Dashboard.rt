@@ -11,11 +11,14 @@
   </section>
 
   <section id="widgetbar">
-    <ul>
-      <li rt-repeat="Widget in this.state.availableWidgets" key={WidgetIndex}>
-        <a href="#" onClick="(e)=>this.onWidgetAdd(e, Widget);" class="btn btn-primary">{Widget.displayName}</a>
-      </li>
-    </ul>
+    <div class="list-group" rt-if="this.state.displayWidgetSelector">
+      <a href="#" class="list-group-item" rt-repeat="Widget in this.state.availableWidgets" key={WidgetIndex} onClick="(e)=>this.onWidgetAdd(e, Widget);">
+        <span class="glyphicon glyphicon-plus"></span> {Widget.displayName}
+      </a>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onClick={this.toggleWidgetSelector}>
+      <span class="glyphicon glyphicon-plus"></span> Add widgets
+    </button>
   <section>
 
 </div>

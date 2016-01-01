@@ -1,6 +1,6 @@
 // import React from 'react';
 // import ReactRouter from 'react-router';
-// import routes from './routes/routes.js';
+// import routes from './routes.js';
 var React = require('react');
 var ReactRouter = require('react-router');
 var routes = require('./routes.js');

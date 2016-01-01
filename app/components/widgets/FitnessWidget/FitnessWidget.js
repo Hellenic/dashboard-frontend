@@ -42,7 +42,11 @@ var FitnessWidget = React.createClass({
     console.log('Error: ', reason.result.error.message);
   },
   componentDidMount: function() {
-    gapi.auth.authorize({client_id: this.props.clientId, scope: this.props.scopes, immediate: true}, this.handleAuthResult);
+    // TODO
+    var that = this;
+    setTimeout(function() {
+      gapi.auth.authorize({client_id: that.props.clientId, scope: that.props.scopes, immediate: true}, that.handleAuthResult);
+    }, 1000);
   },
   render: FitnessWidgetTemplate
 });

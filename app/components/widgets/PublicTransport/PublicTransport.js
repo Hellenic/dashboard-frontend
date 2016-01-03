@@ -13,7 +13,7 @@ var PublicTransportWidget = React.createClass({
     // Kilon aseman bussipysäkki: 2132242
     return {
       id: 'PublicTransportWidget',
-      url: 'http://api.reittiopas.fi/hsl/beta/?request=stop&format=json&userhash=cd71775034a901560ff445b41d78203f43bc226fdb3f&code=2131551'
+      url: 'http://api.reittiopas.fi/hsl/beta/?request=stop&format=json&userhash=396009edda1e21f0e7fb58c34ff39a8f49a669a8b90a&code=2131551'
     };
   },
   getInitialState: function() {

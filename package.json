@@ -7,6 +7,7 @@
     "babel-register": "^6.3.13",
     "consolidate": "^0.13.1",
     "express": "^4.13.3",
+    "helmet": "^1.0.1",
     "history": "^1.9.1",
     "moment": "^2.10.6",
     "mustache": "^2.2.0",

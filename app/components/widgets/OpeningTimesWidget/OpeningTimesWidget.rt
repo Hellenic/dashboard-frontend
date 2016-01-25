@@ -1,0 +1,15 @@
+<div id="openingtimes-widget" class="well well-sm parent-size">
+  <div class="pull-right">
+    <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
+  </div>
+
+  <div class="row">
+    <ul class="list-group col-sm-6" rt-repeat="place in this.state.places" key={placeIndex}>
+      <li class="list-group-item list-group-item-info">{place.name}</li>
+      <li class="list-group-item" rt-repeat="openingTime in place.openingTimes" rt-class="{hidden: !this.isToday(openingTime)}">
+        {openingTime.weekday} {openingTime.from} - {openingTime.to}
+      </li>
+    </ul>
+  </div>
+
+</div>

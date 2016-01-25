@@ -47,7 +47,7 @@ gulp.task('serve', ['html'], function() {
 
     gulp.watch('app/*.html', ['html']);
     gulp.watch('app/**/*.js', ['scripts']);
-    gulp.watch('app/**/*.rt', ['rt', 'scripts']);
+    // gulp.watch('app/**/*.rt', ['rt']);
     gulp.watch('app/**/*.less', ['less']);
 
     gulp.watch('public/*').on('change', browserSync.reload);

@@ -1,20 +1,18 @@
 <div id="public-transport-widget" class="panel panel-primary parent-size">
-    <div class="panel-heading">
-      <div class="pull-right">
-        <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
-      </div>
-      <h3 class="panel-title"><a href="http://www.reittiopas.fi/?from_in=Kilo%2C+Espoo">Public Transport</a></h3>
+
+  <div class="panel-heading">
+    <div class="pull-right">
+      <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
     </div>
+    <h3 class="panel-title"><a href="http://www.reittiopas.fi/?from_in=Kilo%2C+Espoo">Next trains from {this.state.station.name_fi} towards Helsinki:</a></h3>
+  </div>
 
-    <div class="panel-body" rt-scope="this.state.station as station">
-      Next trains from {station.name_fi} towards Helsinki:
+  <div class="panel-body" rt-scope="this.state.station as station">
+    <ul class="list-group">
+      <li rt-repeat="departure in station.departures" key={departureIndex} class="list-group-item large">
+        {departure.time}: {departure.train} - train
+      </li>
+    </ul>
+  </div>
 
-      <ul class="list-group">
-        <li rt-repeat="departure in station.departures" key={departureIndex} class="list-group-item">
-          {departure.time}: {departure.train}
-        </li>
-      </ul>
-
-      <small>TODO Show station based on location, also show buses</small>
-    </div>
 </div>

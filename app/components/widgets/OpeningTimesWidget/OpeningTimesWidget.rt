@@ -3,13 +3,13 @@
     <span onClick="(e)=>this.props.onRemove(e, this.props.id);" class="glyphicon glyphicon-remove"></span>
   </div>
 
-  <div class="row">
-    <ul class="list-group col-sm-6" rt-repeat="place in this.state.places" key={placeIndex}>
-      <li class="list-group-item list-group-item-info">{place.name}</li>
-      <li class="list-group-item" rt-repeat="openingTime in place.openingTimes" rt-class="{hidden: !this.isToday(openingTime)}">
+  <div class="list-group">
+    <a href="#" class="list-group-item" rt-repeat="place in this.state.places" key={placeIndex}>
+      <h5 class="list-group-item-heading">{place.name}</h5>
+      <p class="list-group-item-text" rt-repeat="openingTime in place.openingTimes "rt-class="{hidden: !this.isToday(openingTime)}">
         {openingTime.weekday} {openingTime.from} - {openingTime.to}
-      </li>
-    </ul>
+      </p>
+    </a>
   </div>
-
+  
 </div>

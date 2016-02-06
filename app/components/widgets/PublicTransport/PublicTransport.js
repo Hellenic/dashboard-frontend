@@ -6,6 +6,8 @@ var PublicTransportWidgetTemplate = require('./PublicTransport.rt.js');
 /*
  *
  * API doc: http://api.reittiopas.fi/hsl/beta/?userhash=cd71775034a901560ff445b41d78203f43bc226fdb3f
+ *
+ * TODO Also show busses
 **/
 var PublicTransportWidget = React.createClass({
   getDefaultProps: function() {
